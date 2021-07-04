@@ -1,0 +1,408 @@
+@font-face {
+  font-family: Raleway;
+  src: url("https://fonts.google.com/specimen/Raleway");
+}
+
+@font-face {
+  font-family: Open-Sans;
+  src: url("https://fonts.google.com/specimen/Open+Sans");
+}
+:root {
+  --dark-blue: rgb(24, 31, 42);
+  --white: hsl(0, 0%, 100%);
+  --max-width: 1200px;
+  --page-margin: 120px;
+  --blue-accent: hsl(198, 60%, 50%);
+  --cyan-accent: hsl(176, 68%, 64%);
+  --testimonials-background: hsl(219, 30%, 18%);
+  --footer-background: hsl(215, 52%, 9%);
+  --email-background: hsl(217, 28%, 15%);
+  --main-background: hsl(218, 28%, 13%);
+}
+
+body,
+html {
+  font-size: 14px;
+  line-height: 25px;
+  font-style: normal;
+  font-family: Open-Sans;
+  font-weight: normal;
+  background: var(--email-background);
+  color: var(--white);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Open-Sans;
+  font-weight: normal;
+  color: var(--white);
+}
+
+ul,
+li,
+ol {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+ol,
+body,
+blockquote,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Raleway;
+}
+
+body {
+  background-image: url("/images/bg-curvy-desktop.svg"), var(--main-background);
+  background-repeat: no-repeat;
+  background-position: 0 27%;
+  background-size: contain;
+}
+
+form {
+  margin-top: 20px;
+}
+input {
+  border-radius: 30px;
+  padding: 15px;
+  width: 60%;
+  background: #ffffff;
+  border: 1px solid transparent;
+}
+
+.input {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  /* margin-right: 15px; */
+  justify-content: space-between;
+}
+
+button {
+  cursor: pointer;
+  padding: 16px 80px;
+  border: none;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-family: Raleway;
+}
+
+button.primary {
+  background: var(--cyan-accent);
+}
+
+header {
+  max-width: var(--max-width);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+header nav ul {
+  display: flex;
+}
+
+nav {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+
+h1 {
+  font-weight: 800;
+  line-height: 48px;
+  font-size: 47px;
+}
+header,
+main,
+section {
+  padding-left: var(--page-margin);
+  padding-right: var(--page-margin);
+}
+
+main > div {
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+.illustration-image {
+  display: flex;
+  justify-content: center;
+}
+
+.illustration-text {
+  text-align: center;
+}
+
+.illustration-text h1 {
+  margin: auto;
+  font-weight: 800;
+  line-height: 48px;
+  font-size: 47px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.illustration-text p {
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.benefits {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.benefits > div {
+  max-width: 900px;
+  margin: auto;
+}
+.benefits-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+  gap: 80px;
+  text-align: center;
+}
+
+.benefits-list li > div {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.benefits-list h3 {
+  font-weight: 800;
+}
+
+.stay-productive > div {
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+.stay-productive > div h1 {
+  margin-bottom: 20px;
+  max-width: 450px;
+}
+
+.fylo-stay-productive a {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  border-bottom: 0.5px solid var(--cyan-accent);
+  width: max-content;
+  letter-spacing: 1px;
+  color: var(--cyan-accent);
+}
+.fylo-stay-productive a img {
+  margin-left: 8px;
+}
+
+.testimonials {
+  /* background-position: -1% 11%;
+  background-image: url("/images/bg-quotes.png");
+  background-repeat: no-repeat; */
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.testimonials > div {
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+.testimonials-lists {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+  gap: 30px;
+  cursor: pointer;
+  transition: all 0.5s linear;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+.testimonials-lists::before {
+  content: url("/images/bg-quotes.png");
+  position: absolute;
+  top: -35px;
+  left: -12px;
+}
+
+.testimonials-lists cite {
+  display: flex;
+  margin-top: 10px;
+}
+.testimonials-lists cite .cite-image {
+  margin-right: 6px;
+  /* display: flex;
+	align-items: center; */
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.testimonials-lists cite .cite-image img {
+  width: 100%;
+}
+
+.testimonials-lists li {
+  background: var(--testimonials-background);
+  padding: 40px;
+  z-index: 2;
+}
+
+.testimonials-lists .cite-details {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.testimonials-lists .cite-details .name {
+  font-style: normal;
+  font-weight: 700;
+}
+
+.testimonials-lists .cite-details .position {
+  font-style: normal;
+}
+
+.footer {
+  background: var(--footer-background);
+}
+.footer > div {
+  max-width: var(--max-width);
+  margin: auto;
+  padding-top: 250px;
+  padding-bottom: 25px;
+}
+
+.early-access {
+  position: relative;
+  margin-bottom: -170px;
+}
+
+.early-access > div {
+  max-width: 900px;
+  background: var(--email-background);
+  margin: auto;
+  padding: 56px;
+  text-align: center;
+}
+
+.early-access h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 20px;
+}
+
+.footer-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+  gap: 25px;
+}
+
+.footer-list ul li {
+  margin-bottom: 20px;
+  line-height: 25px;
+}
+.footer-list ul li img {
+  margin-right: 8px;
+}
+
+.socials {
+  display: flex;
+}
+
+.socials li {
+  margin-right: 15px;
+}
+.main-footer {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .logo img {
+    width: 155px;
+  }
+  nav li {
+    margin-right: 30px;
+  }
+
+  .stay-productive > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .illustration-text h1 {
+    max-width: 720px;
+  }
+  .illustration-text p {
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --page-margin: 40px;
+  }
+  h1 {
+    font-size: 30px !important;
+  }
+  .logo img {
+    width: 100px;
+  }
+  nav li {
+    margin-right: 15px;
+  }
+  .stay-productive > div {
+    display: block;
+  }
+  .illustration-image img {
+    width: 100%;
+  }
+  .stay-productive-image img {
+    width: 100%;
+  }
+  input {
+    width: 100%;
+  }
+  button {
+    padding: 8px 40px;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .footer-list ul li {
+    text-align: left;
+  }
+  .footer-list .socials {
+    justify-content: center;
+  }
+}

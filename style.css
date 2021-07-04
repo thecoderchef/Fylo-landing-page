@@ -1,0 +1,43 @@
+body,
+html {
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	background: hsl(218, 28%, 13%);
+}
+
+* {
+	box-sizing: border-box;
+	font-weight: normal;
+}
+
+ul,
+li,
+ol {
+	list-style-type: none;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+ol,
+body,
+html {
+	margin: 0;
+	padding: 0;
+}
+
+.list1{
+	
+}
