@@ -27,7 +27,7 @@ html {
   font-style: normal;
   font-family: Open-Sans;
   font-weight: normal;
-  background: var(--email-background);
+  background: var(--main-background);
   color: var(--white);
 }
 
@@ -383,7 +383,7 @@ main > div {
     margin-right: 15px;
   }
   .stay-productive > div {
-    display: block;
+    display: block !important;
   }
   .illustration-image img {
     width: 100%;
